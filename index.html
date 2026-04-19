@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>107d | Soluciones Eléctricas Rápidas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        :root {
+            --neon-green: #ccff00;
+            --dark-bg: #050505;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 15px rgba(204, 255, 0, 0.6);
+        }
+
+        .btn-primary {
+            background-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(204, 255, 0, 0.6);
+        }
+
+        .nav-link {
+            transition: color 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-green);
+        }
+
+        .active-link {
+            color: var(--neon-green);
+            border-bottom: 2px solid var(--neon-green);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navegación -->
+    <nav class="flex justify-between items-center px-6 py-5 bg-black/90 sticky top-0 z-50 border-b border-white/10">
+        <div class="text-3xl font-black italic tracking-tighter">
+            107<span class="text-[#ccff00]">d</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="nav-link active-link">Inicio</a>
+            <a href="servicios.html" class="nav-link">Servicios</a>
+            <a href="#" class="nav-link">Nosotros</a>
+            <a href="#" class="nav-link">Trabajos</a>
+            <a href="contacto.html" class="nav-link">Contacto</a>
+        </div>
+
+        <div class="border border-[#ccff00] text-[#ccff00] px-4 py-2 rounded-lg font-bold text-sm">
+            <i class="fas fa-phone-alt mr-2"></i> +56 9 1234 5678
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <main class="relative min-h-[80vh] flex items-center px-6 lg:px-20 overflow-hidden">
+        <div class="max-w-3xl z-10">
+            <div class="flex items-center text-[#ccff00] font-bold text-xs tracking-[0.3em] mb-4 uppercase">
+                <i class="fas fa-bolt mr-2"></i> Energía que conecta. Calidad que se nota.
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black uppercase italic leading-[0.9] mb-6">
+                Soluciones <br>
+                <span class="text-white">Eléctricas</span> <br>
+                <span class="text-[#ccff00] neon-glow italic">Rápidas y Confiables</span>
+            </h1>
+            <p class="text-gray-400 text-lg max-w-md mb-8">
+                Atención rápida, trabajo profesional y precios justos. Servicio domiciliario en toda la zona con certificación.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="contacto.html" class="btn-primary text-black font-black px-8 py-4 rounded-xl uppercase text-sm flex items-center">
+                    <i class="fas fa-bolt mr-2 text-xs"></i> Contactar ahora
+                </a>
+                <a href="servicios.html" class="border-2 border-white/20 hover:border-white text-white font-black px-8 py-4 rounded-xl uppercase text-sm flex items-center transition">
+                    <i class="fas fa-tools mr-2 text-xs"></i> Ver servicios
+                </a>
+            </div>
+        </div>
+        
+        <!-- Elemento decorativo visual -->
+        <div class="absolute right-[-10%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden lg:block">
+            <h2 class="text-[20rem] font-black italic text-[#ccff00] rotate-[-5deg]">107d</h2>
+        </div>
+    </main>
+
+    <!-- Barra de Beneficios -->
+    <section class="bg-[#0a0a0a] border-y border-white/5 py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="flex items-center gap-4">
+                <i class="fas fa-shield-alt text-[#ccff00] text-3xl"></i>
+                <div>
+                    <h4 class="font-bold uppercase text-sm tracking-tighter">Trabajo Seguro</h4>
+                    <p class="text-gray-500 text-xs">Cumplimos todas las normas.</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="fas fa-clock text-[#ccff00] text-3xl"></i>
+                <div>
+                    <h4 class="font-bold uppercase text-sm tracking-tighter">Atención Rápida</h4>
+                    <p class="text-gray-500 text-xs">Llegamos antes que el resto.</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="fas fa-check-circle text-[#ccff00] text-3xl"></i>
+                <div>
+                    <h4 class="font-bold uppercase text-sm tracking-tighter">Garantía Total</h4>
+                    <p class="text-gray-500 text-xs">Calidad 100% garantizada.</p>
+                </div>
+            </div>
+            <div class="bg-[#ccff00] p-4 rounded-xl flex items-center justify-between text-black">
+                <div>
+                    <p class="text-[10px] font-black uppercase">¿Necesitas ayuda?</p>
+                    <p class="font-bold">+56 9 1234 5678</p>
+                </div>
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

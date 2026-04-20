@@ -51,11 +51,51 @@
             color: var(--neon-green);
             border-bottom: 2px solid var(--neon-green);
         }
+
+        /* --- NUEVOS ESTILOS PARA EL EFECTO ELÉCTRICO Y AGUA --- */
+        .wet-floor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));
+            border-top: 1px solid rgba(204, 255, 0, 0.1);
+            backdrop-filter: blur(4px);
+            z-index: 5;
+        }
+
+        .reflection-container {
+            position: absolute;
+            bottom: 0;
+            left: 6%; /* Alineado con el contenido lateral */
+            transform: scaleY(-1);
+            opacity: 0.2;
+            filter: blur(3px);
+            z-index: 4;
+            pointer-events: none;
+        }
+
+        .bolt {
+            position: absolute;
+            background: #fff;
+            width: 2px;
+            height: 100px;
+            opacity: 0;
+            box-shadow: 0 0 20px var(--neon-green);
+            animation: lightning-flash 5s infinite;
+        }
+
+        @keyframes lightning-flash {
+            0%, 95%, 100% { opacity: 0; }
+            96% { opacity: 1; transform: scaleX(2) rotate(5deg); }
+            97% { opacity: 0; }
+            98% { opacity: 0.8; transform: scaleX(1) rotate(-5deg); }
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navegación -->
     <nav class="flex justify-between items-center px-6 py-5 bg-black/90 sticky top-0 z-50 border-b border-white/10">
         <div class="text-3xl font-black italic tracking-tighter">
             107<span class="text-[#ccff00]">d</span>
@@ -74,8 +114,11 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <main class="relative min-h-[80vh] flex items-center px-6 lg:px-20 overflow-hidden">
+    <main class="relative min-h-[90vh] flex items-center px-6 lg:px-20 overflow-hidden">
+        <div class="bolt" style="top: 10%; left: 20%;"></div>
+        <div class="bolt" style="top: 20%; left: 70%; animation-delay: 2s;"></div>
+        <div class="bolt" style="top: 5%; left: 40%; animation-delay: 3.5s;"></div>
+
         <div class="max-w-3xl z-10">
             <div class="flex items-center text-[#ccff00] font-bold text-xs tracking-[0.3em] mb-4 uppercase">
                 <i class="fas fa-bolt mr-2"></i> Energía que conecta. Diseños que se marcan diferencia.
@@ -98,14 +141,22 @@
                 </a>
             </div>
         </div>
+
+        <div class="reflection-container hidden md:block">
+            <h1 class="text-5xl md:text-8xl font-black uppercase italic leading-[0.9] mb-6">
+                Voltaje para <br>
+                <span class="text-white">tu espacio</span> <br>
+                <span class="text-[#ccff00] italic">Arte para tu marca</span>
+            </h1>
+        </div>
+
+        <div class="wet-floor"></div>
         
-        <!-- Elemento decorativo visual -->
         <div class="absolute right-[-10%] top-1/2 -translate-y-1/2 opacity-20 pointer-events-none hidden lg:block">
             <h2 class="text-[20rem] font-black italic text-[#ccff00] rotate-[-5deg]">107d</h2>
         </div>
     </main>
 
-    <!-- Barra de Beneficios -->
     <section class="bg-[#0a0a0a] border-y border-white/5 py-12 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="flex items-center gap-4">
@@ -132,7 +183,7 @@
             <div class="bg-[#ccff00] p-4 rounded-xl flex items-center justify-between text-black">
                 <div>
                     <p class="text-[10px] font-black uppercase">¿Necesitas ayuda?</p>
-                    <p class="font-bold">+56 9 1234 5678</p>
+                    <p class="font-bold">+56 9 7459 8279</p>
                 </div>
                 <i class="fab fa-whatsapp text-2xl"></i>
             </div>
